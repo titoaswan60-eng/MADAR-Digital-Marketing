@@ -1,2 +1,2 @@
-# MADAR-Digital-Marketing
+# MADARDigitalMarketing
 Digital Marketing Agency
