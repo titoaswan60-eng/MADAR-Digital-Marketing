@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Digital | دبي - الإمارات</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            accent: '#06b6d4',
+                            dark: '#0b0f19',
+                            card: '#131b2e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-ar { font-family: 'Cairo', sans-serif; }
+        .font-en { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body id="body" class="bg-brand-dark text-slate-200 font-ar transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-brand-500/20">
+                    N
+                </div>
+                <span class="text-xl font-black tracking-wider text-white">NEXORA<span class="text-brand-accent">.AE</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                <a href="#about" class="hover:text-brand-accent transition" data-i18n="nav_about">من نحن</a>
+                <a href="#services" class="hover:text-brand-accent transition" data-i18n="nav_services">خدماتنا</a>
+                <a href="#stats" class="hover:text-brand-accent transition" data-i18n="nav_stats">إنجازاتنا</a>
+                <a href="#contact" class="hover:text-brand-accent transition" data-i18n="nav_contact">تواصل معنا</a>
+            </nav>
+
+            <!-- Actions (Lang Switcher & CTA) -->
+            <div class="flex items-center gap-4">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-900/50 hover:border-brand-accent text-sm font-semibold transition">
+                    <i class="fa-solid fa-globe text-brand-accent"></i>
+                    <span id="langBtnText">English</span>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-bold text-sm shadow-lg shadow-brand-600/30 hover:opacity-95 transition" data-i18n="cta_btn">
+                    احجز استشارتك
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+        <!-- Glow Effect Background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-600/20 blur-[140px] pointer-events-none rounded-full"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-accent text-xs sm:text-sm font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span data-i18n="hero_badge">وكالة التسويق الرقمي الأولى لرواد الأعمال في الإمارات</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
+                <span data-i18n="hero_title_1">نُضاعف مبيعاتك ونبني</span><br>
+                <span class="gradient-text" data-i18n="hero_title_2">حضورك الرقمي في الخليج</span>
+            </h1>
+
+            <p class="text-slate-400 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10" data-i18n="hero_desc">
+                نساعد الشركات والعلامات التجارية في دبي وأبوظبي على تحقيق أعلى عائد على الاستثمار الإعلاني من خلال استراتيجيات نمو ذكية وحملات تسويقية متقدمة.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-bold shadow-xl shadow-brand-600/30 hover:scale-105 transition" data-i18n="hero_cta_primary">
+                    ابدأ نمو مشروعك الآن
+                </a>
+                <a href="https://wa.me/971500000000" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-white font-semibold flex items-center justify-center gap-3 transition">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                    <span data-i18n="hero_cta_secondary">تحدث معنا عبر واتساب</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-12 border-y border-slate-800 bg-slate-950/40">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-3xl sm:text-5xl font-black text-white mb-2">+180</p>
+                <p class="text-slate-400 text-sm font-semibold" data-i18n="stat_1">عميل ناجح في الإمارات</p>
+            </div>
+            <div>
+                <p class="text-3xl sm:text-5xl font-black text-brand-accent mb-2">+45M</p>
+                <p class="text-slate-400 text-sm font-semibold" data-i18n="stat_2">درهم ميزانيات إعلانية مُدارة</p>
+            </div>
+            <div>
+                <p class="text-3xl sm:text-5xl font-black text-white mb-2">4.2x</p>
+                <p class="text-slate-400 text-sm font-semibold" data-i18n="stat_3">متوسط العائد الإعلاني (ROAS)</p>
+            </div>
+            <div>
+                <p class="text-3xl sm:text-5xl font-black text-brand-accent mb-2">99%</p>
+                <p class="text-slate-400 text-sm font-semibold" data-i18n="stat_4">نسبة رضا وتجديد العملاء</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-brand-accent text-sm font-bold uppercase tracking-widest mb-3" data-i18n="services_subtitle">خدماتنا التخصصية</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="services_title">حلول تسويقية متكاملة تدفع بشركتك نحو الصدارة</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="p-8 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-500/50 transition group">
+                <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3" data-i18n="srv1_title">إعلانات الأداء الممولة</h4>
+                <p class="text-slate-400 leading-relaxed text-sm" data-i18n="srv1_desc">
+                    إدارة الحملات على سناب شات، تيك توك، جوجل وميتا لاستهداف جمهور الإمارات بدقة وتحقيق أعلى مبيعات.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="p-8 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-500/50 transition group">
+                <div class="w-14 h-14 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3" data-i18n="srv2_title">سيو محركات البحث (SEO)</h4>
+                <p class="text-slate-400 leading-relaxed text-sm" data-i18n="srv2_desc">
+                    تصدر نتائج جوجل في دبي والإمارات بالعربية والإنجليزية لجلب عملاء ذوي نية شراء عالية بدون تكلفة نقرات.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-8 rounded-2xl bg-brand-card border border-slate-800 hover:border-brand-500/50 transition group">
+                <div class="w-14 h-14 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white mb-3" data-i18n="srv3_title">صناعة المحتوى وإدارة الحسابات</h4>
+                <p class="text-slate-400 leading-relaxed text-sm" data-i18n="srv3_desc">
+                    إنتاج فيديوهات ريلز، تصاميم إبداعية، وإدارة وتفاعل يومي يعكس هوية علامتك التجارية بلهجة تناسب السوق الإماراتي.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & UAE Office Section -->
+    <section id="contact" class="py-20 px-6 bg-slate-950/60 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mb-4" data-i18n="contact_title">جاهز لمضاعفة مبيعاتك معنا؟</h2>
+                <p class="text-slate-400 leading-relaxed mb-8" data-i18n="contact_desc">
+                    تفضل بملء بياناتك أو تواصل معنا مباشرة لتحديد جلسة استشارية مجانية مدتها 30 دقيقة لتحليل وضع شركتك التسويقي.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400" data-i18n="loc_label">المقر الرئيسي</p>
+                            <p class="text-sm font-semibold text-white" data-i18n="loc_val">دبي - الخليج التجاري (Business Bay)، الإمارات</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400" data-i18n="phone_label">الهاتف / واتساب</p>
+                            <p class="text-sm font-semibold text-white" dir="ltr">+971 4 000 0000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form onsubmit="event.preventDefault(); alert(currentLang === 'ar' ? 'تم استلام طلبك بنجاح! سنتواصل معك خلال ساعتين.' : 'Thank you! We will contact you within 2 hours.');" class="bg-brand-card p-8 rounded-2xl border border-slate-800 space-y-4 shadow-xl">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-2" data-i18n="form_name">الاسم بالكامل</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-2" data-i18n="form_phone">رقم الهاتف (مع مفتاح الدولة)</label>
+                    <input type="tel" placeholder="+971 5..." required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-2" data-i18n="form_service">الخدمة المطلوبة</label>
+                    <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500 text-sm">
+                        <option data-i18n="opt_1">إعلانات ممولة وحملات أداء</option>
+                        <option data-i18n="opt_2">سيو وتصدر محركات البحث</option>
+                        <option data-i18n="opt_3">إدارة حسابات سوشيال ميديا</option>
+                        <option data-i18n="opt_4">باقة تسويق شاملة</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold transition text-sm shadow-lg shadow-brand-600/30" data-i18n="form_submit">
+                    إرسال الطلب الآن
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>© 2026 Nexora Digital Marketing LLC - Dubai, UAE. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></p>
+    </footer>
+
+    <!-- Translation Dictionary & Switching Script -->
+    <script>
+        let currentLang = 'ar';
+
+        const translations = {
+            ar: {
+                nav_about: "من نحن",
+                nav_services: "خدماتنا",
+                nav_stats: "إنجازاتنا",
+                nav_contact: "تواصل معنا",
+                cta_btn: "احجز استشارتك",
+                hero_badge: "وكالة التسويق الرقمي الأولى لرواد الأعمال في الإمارات",
+                hero_title_1: "نُضاعف مبيعاتك ونبني",
+                hero_title_2: "حضورك الرقمي في الخليج",
+                hero_desc: "نساعد الشركات والعلامات التجارية في دبي وأبوظبي على تحقيق أعلى عائد على الاستثمار الإعلاني من خلال استراتيجيات نمو ذكية وحملات تسويقية متقدمة.",
+                hero_cta_primary: "ابدأ نمو مشروعك الآن",
+                hero_cta_secondary: "تحدث معنا عبر واتساب",
+                stat_1: "عميل ناجح في الإمارات",
+                stat_2: "درهم ميزانيات إعلانية مُدارة",
+                stat_3: "متوسط العائد الإعلاني (ROAS)",
+                stat_4: "نسبة رضا وتجديد العملاء",
+                services_subtitle: "خدماتنا التخصصية",
+                services_title: "حلول تسويقية متكاملة تدفع بشركتك نحو الصدارة",
+                srv1_title: "إعلانات الأداء الممولة",
+                srv1_desc: "إدارة الحملات على سناب شات، تيك توك، جوجل وميتا لاستهداف جمهور الإمارات بدقة وتحقيق أعلى مبيعات.",
+                srv2_title: "سيو محركات البحث (SEO)",
+                srv2_desc: "تصدر نتائج جوجل في دبي والإمارات بالعربية والإنجليزية لجلب عملاء ذوي نية شراء عالية بدون تكلفة نقرات.",
+                srv3_title: "صناعة المحتوى وإدارة الحسابات",
+                srv3_desc: "إنتاج فيديوهات ريلز، تصاميم إبداعية، وإدارة وتفاعل يومي يعكس هوية علامتك التجارية بلهجة تناسب السوق الإماراتي.",
+                contact_title: "جاهز لمضاعفة مبيعاتك معنا؟",
+                contact_desc: "تفضل بملء بياناتك أو تواصل معنا مباشرة لتحديد جلسة استشارية مجانية مدتها 30 دقيقة لتحليل وضع شركتك التسويقي.",
+                loc_label: "المقر الرئيسي",
+                loc_val: "دبي - الخليج التجاري (Business Bay)، الإمارات",
+                phone_label: "الهاتف / واتساب",
+                form_name: "الاسم بالكامل",
+                form_phone: "رقم الهاتف (مع مفتاح الدولة)",
+                form_service: "الخدمة المطلوبة",
+                opt_1: "إعلانات ممولة وحملات أداء",
+                opt_2: "سيو وتصدر محركات البحث",
+                opt_3: "إدارة حسابات سوشيال ميديا",
+                opt_4: "باقة تسويق شاملة",
+                form_submit: "إرسال الطلب الآن",
+                footer_rights: "جميع الحقوق محفوظة."
+            },
+            en: {
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_stats: "Achievements",
+                nav_contact: "Contact",
+                cta_btn: "Book a Consultation",
+                hero_badge: "#1 Digital Marketing Agency for UAE Businesses",
+                hero_title_1: "Scale Your Sales & Dominate",
+                hero_title_2: "The UAE Digital Market",
+                hero_desc: "We help brands and enterprises across Dubai and Abu Dhabi achieve high ROAS through performance marketing, smart growth hacking, and bilingual campaigns.",
+                hero_cta_primary: "Start Growing Today",
+                hero_cta_secondary: "Chat on WhatsApp",
+                stat_1: "Satisfied Clients in UAE",
+                stat_2: "AED Ad Spend Managed",
+                stat_3: "Average Client ROAS",
+                stat_4: "Client Retention Rate",
+                services_subtitle: "Our Core Services",
+                services_title: "Full-Funnel Marketing Solutions Built for High Growth",
+                srv1_title: "Performance Advertising",
+                srv1_desc: "High-ROI paid ads across Snapchat, TikTok, Google, and Meta hyper-targeted to the GCC and UAE demographics.",
+                srv2_title: "Bilingual SEO Strategy",
+                srv2_desc: "Rank #1 on Google in Dubai & Abu Dhabi in both English and Arabic to capture high-intent inbound organic leads.",
+                srv3_title: "Social Media & Content Creation",
+                srv3_desc: "Engaging short-form video reels, high-converting copy, and brand positioning tailored to local UAE culture.",
+                contact_title: "Ready to accelerate your revenue?",
+                contact_desc: "Fill out the form or reach out directly to schedule a free 30-minute growth strategy session for your business.",
+                loc_label: "Headquarters",
+                loc_val: "Business Bay, Dubai, United Arab Emirates",
+                phone_label: "Phone / WhatsApp",
+                form_name: "Full Name",
+                form_phone: "Phone Number (with country code)",
+                form_service: "Service Required",
+                opt_1: "Paid Performance Ads",
+                opt_2: "Search Engine Optimization (SEO)",
+                opt_3: "Social Media Management",
+                opt_4: "Full-Service Growth Retainer",
+                form_submit: "Submit Request",
+                footer_rights: "All rights reserved."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const html = document.documentElement;
+            const body = document.getElementById('body');
+            const langBtnText = document.getElementById('langBtnText');
+
+            if (currentLang === 'en') {
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+                body.classList.remove('font-ar');
+                body.classList.add('font-en');
+                langBtnText.textContent = 'العربية';
+            } else {
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+                body.classList.remove('font-en');
+                body.classList.add('font-ar');
+                langBtnText.textContent = 'English';
+            }
+
+            // Update all translated strings
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>
